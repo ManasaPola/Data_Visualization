@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 100px;
+  height: 100px;
+  background: black;
+  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s;
+}
+
+div:hover {
+  width: 300px;
+}
+body {
+    -webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.3) );
+    filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.25) );
+}
+</style>
+</head>
+<body>
+
+<h1 style="color:#ff7f7f;">Data Visualization Assignment 2 Write Up</h1>
+
+<p><b>Story Description:</b> My Visualization helps the viewer to see the statistics of a winner in 10 years of Australian Open Male Final Matches.
+  The variables I have considered are described below</p>
+  <ol>
+    <li>Ace - a serve that lands in the service box and is then untouched by the opponent.</li>
+    <li>Double Fault - Two serving faults in a row in one point, causing the player serving to lose the point.</li>
+    <li>Error - A shot that does not land (correctly) in the opponent's court, resulting in the loss of a point</li>
+    <li>Winner Points - A shot that is not reached by the opponent and wins the point; sometimes also a serve that is reached but not returned into the court</li>
+    <li>Average First Serve- The first of the two attempts to serve that a player is allowed at the beginning of a point. A let serve that lands inbounds does not count as a serve.</li>
+    <li>Average Second Serve- Second and final of the two serve attempts a player is allowed at the beginning of a point, not counting net cord let serves that would otherwise be good.</li>
+  </ol>
+  <p>In my point of view, the above six features are the key features that can be considered in analyzing the winner performance.
+    This is combination of Service variables (Ace, Double, avgFirstServe, avgSecondServe) and Match performance variables (winner, error).
+    I tried to maintain the originality with the given data by not modifying to come up with any external variables which summarizes this.</p>
+  <p>Obviously, many people's assumption would be if a player has a skill of gaining more Ace and Winner points and less Error and Double Fault points will be more likely to win the match,
+    but as per the trends in visualization there are some instances though having less Ace and Winner points and less Error and Double points made them win the match.
+    In addition, to the above features Average First Serve, Second Serve also gives us the idea that First Serve are always sent with the more speed and Second Serve are always with the less,
+    this visualization gave us the one strategy to win a point. Although there are some discrepancies most of the data portray the as per the intuition. These discrepancies can be ignored because they are caused due to some other factors like aggressive nature of the player towards the end of the game, trying different tactics against the opponent to win a point. </p>
+    <p><b>Data Analysis</b> The data provided helped me garner a deep understanding of the game of tennis.
+      Handling the null values is another important task for the data visualization.
+      The strategy that I have followed to clean the Missing data is I replaced with the Mean.
+      Mean gives us the performance on an average because dropping the row will not achieve your goal
+      and it is not feasible to ignore record just for the single value.</p>
+      <p><b>Visual Description</b></p>
+      <ol>
+        <li>Header: "Finals Match Winner Statistics" this title conveys the idea that Winner Statistics in the Final Matches in terms of Win, Ace, Double fault, error, First and Second serve.
+          I have chosen the background of this color to be Optic yellow because this is the official color given to Tennis balls and this is tennis data.
+          The Navigation bar on the left side is also chosen to be Yellow but other variant just to differentiate between the header and navigation bar.</li>
+        <li>The components in the navigation bar are in blue indicating that they are hyperlinks which you can click so that the corresponding graph
+          displays on the right side svg area with the header in red which contrasts with the green and clearly visible color.</li>
+        <li>Each datapoint is chosen to be different color indicating they are different years and this color is consistent in all the graphs which helps the user to compare easily among different features.</li>
+        <li>Scales are in black because Contrast is more important in lightness and color. On a White background black text is the highest contrast.</li>
+        <li>On hover of each data point it displays the name of the winner in that selected year and entire visualization is made vibrant by adding a drop shadow functionality.</li>
+      </ol>
+      <p>The visual is appropriately labelled along with the name and color to convey the story easily to the viewer. Hence utilizing the visualization power of a human eye, the dataset given to me is portrayed without losing any information.</p>
+</body>
+</html>
